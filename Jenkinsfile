@@ -5,7 +5,7 @@ pipeline {
             steps {
                 timeout(time: 3, unit: 'MINUTES') {
                     retry(5) {
-                        bat helloMessage.bat
+                        bat 'helloMessage.bat'
                     }
                 }
             }
