@@ -1,11 +1,11 @@
 pipeline {
-    agent { docker { image 'golang' } }
+    agent any
     stages {
         stage('build') {
             steps {
                 timeout(time: 3, unit: 'MINUTES') {
                     retry(5) {
-                        bat 'set'
+                        bat helloMessage.bat
                     }
                 }
             }
